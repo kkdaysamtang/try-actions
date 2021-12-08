@@ -39,7 +39,7 @@ jobs:
       - name: Build alpine and push
         uses: docker/build-push-action@v2
         with:
-          file: Dockerfile.fpm.alpine
+          file: Dockerfile.fpm.alpine3.10
           push: true
           platforms: |
             linux/amd64
