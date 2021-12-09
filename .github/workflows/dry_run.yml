@@ -1,4 +1,4 @@
-name: Dry Run PHP Docker Image
+name: Dry Run PHP Docker Image1
 
 on:
   pull_request
