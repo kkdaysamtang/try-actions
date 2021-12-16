@@ -13,7 +13,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Install & enable php extension
-RUN docker-php-ext-install \
+RUN docker-php-ext-configure \
+        gd --with-png-dir=/usr --with-jpeg-dir=/usr \
+    && docker-php-ext-install \
         bcmath \
         zip \
         pdo_pgsql \
