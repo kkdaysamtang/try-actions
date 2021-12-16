@@ -36,15 +36,3 @@ jobs:
             ${{ env.DOCKERHUB_REPO }}:7.3-fpm
             ${{ env.DOCKERHUB_REPO }}:7.3.13-fpm
             ${{ env.DOCKERHUB_REPO }}:7.3.13-fpm-${{ env.GIT_HASH }}
-      - name: Build alpine and push
-        uses: docker/build-push-action@v2
-        with:
-          file: Dockerfile.fpm.alpine3.10
-          push: true
-          platforms: |
-            linux/amd64
-            linux/arm64/v8
-          tags: |
-            ${{ env.DOCKERHUB_REPO }}:7.3-fpm-alpine
-            ${{ env.DOCKERHUB_REPO }}:7.3.13-fpm-alpine
-            ${{ env.DOCKERHUB_REPO }}:7.3.13-fpm-alpine-${{ env.GIT_HASH }}
